@@ -28,7 +28,7 @@
   "servers": [
     { "url": "http://localhost:3030", "description": "Local" },
     {
-      "url": "https://petly-gd7x.onrender.com",
+      "url": "https://petly-backend-ee1t.onrender.com",
       "description": "Main"
     }
   ],
