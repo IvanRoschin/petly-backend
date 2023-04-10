@@ -1,7 +1,7 @@
 const express = require("express");
 const logger = require("morgan");
 const cors = require("cors");
-const dotenv = require("dotenv");
+require("dotenv").config();
 const swaggerUi = require("swagger-ui-express");
 const swaggerDocument = require("./swagger.json");
 
@@ -11,8 +11,6 @@ const friendsRouter = require("./routes/api/friends");
 const petsRouter = require("./routes/api/pets");
 const noticesRouter = require("./routes/api/notices");
 const citiesRouter = require("./routes/api/cities");
-
-dotenv.config();
 
 const app = express();
 
