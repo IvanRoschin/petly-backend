@@ -5,12 +5,12 @@ const bcrypt = require("bcryptjs");
 require("dotenv").config();
 const { v4 } = require("uuid");
 
-const { GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, FRONTEND_URL } = process.env;
+const { GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET } = process.env;
 
 const googleParams = {
   clientID: GOOGLE_CLIENT_ID,
   clientSecret: GOOGLE_CLIENT_SECRET,
-  callbackURL: `${FRONTEND_URL}/api/users/google/callback`,
+  callbackURL: `https://petly-backend-ee1t.onrender.com/api/users/google/callback`,
 
   passReqToCallback: true,
 };

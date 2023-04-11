@@ -25,7 +25,7 @@ const googleAuth = async (req, res) => {
     refreshToken,
   });
   res.redirect(
-    `https://fantusya.github.io/petly?accessToken=${accessToken}&refreshToken=${refreshToken}`
+    `https://IvanRoschin.github.io/petly-frontend?accessToken=${accessToken}&refreshToken=${refreshToken}`
   );
 };
 
