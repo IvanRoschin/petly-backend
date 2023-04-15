@@ -10,8 +10,7 @@ const { GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET } = process.env;
 const googleParams = {
   clientID: GOOGLE_CLIENT_ID,
   clientSecret: GOOGLE_CLIENT_SECRET,
-  callbackURL: `https://petly-backend-ee1t.onrender.com/api/users/google/callback`,
-
+  callbackURL: `https://petly-backend-flax.vercel.app/api/users/google/callback`,
   passReqToCallback: true,
 };
 

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "name": "wallet-backend",
+  "name": "petly-backend",
   "builds": [{ "src": "server.js", "use": "@vercel/node" }],
   "routes": [{ "src": "/(.*)", "dest": "/server.js" }]
 }
