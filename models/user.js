@@ -37,9 +37,8 @@ const userSchema = new Schema(
     },
 
     city: {
-      type: String,
+      type: Object,
       required: [true, "City is required"],
-      minLength: 2,
     },
 
     phone: {
