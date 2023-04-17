@@ -42,7 +42,7 @@ router.get("/current", auth, ctrlWrapper(ctrl.getCurrent));
 
 router.get("/logout", auth, ctrlWrapper(ctrl.logOut));
 
-router.get("/delete", auth, ctrlWrapper(ctrl.deleteUser));
+router.delete("/delete", auth, ctrlWrapper(ctrl.deleteUser));
 
 router.patch(
   "/edit",

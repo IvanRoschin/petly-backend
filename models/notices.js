@@ -38,8 +38,8 @@ const noticeSchema = Schema(
       required: [true, "Please, select a sex of your pet"],
     },
     location: {
-      type: String,
-      required: [true, "Please, select a location"],
+      type: Object,
+      // required: [true, "Please, select a location"],
     },
     price: {
       type: Number,
@@ -74,7 +74,7 @@ const joiAddNoticeSchema = Joi.object({
   breed: Joi.string().min(2).max(24).required(),
   sex: Joi.string().valid("male", "female").required(),
   birthDate: Joi.date().required(),
-  location: Joi.string().required(),
+  location: Joi.object().required(),
   price: Joi.number().min(0.01).required(),
   comments: Joi.string().min(8).max(120).required(),
   photoURL: Joi.string(),
