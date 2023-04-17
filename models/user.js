@@ -96,7 +96,7 @@ const joiRegisterSchema = Joi.object({
   // email: Joi.string().min(12).max(50).pattern(emailRegexp).required(),
   password: Joi.string().min(7).pattern(passwordRegexp).required(),
   name: Joi.string().min(2).max(16).pattern(nameRegexp).required(),
-  city: Joi.string().min(2).required(),
+  city: Joi.object().required(),
   phone: Joi.string().pattern(phoneRegexp).required(),
 });
 
@@ -124,7 +124,7 @@ const joiEditInfoSchema = Joi.object({
     .max(50),
   birthDate: Joi.date(),
   name: Joi.string().min(2).max(16).pattern(nameRegexp),
-  city: Joi.string().min(2),
+  city: Joi.object(),
   phone: Joi.string().pattern(phoneRegexp),
 });
 
