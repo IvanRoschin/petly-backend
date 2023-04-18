@@ -132,6 +132,10 @@ const joiRefreshTokenSchema = Joi.object({
   refreshToken: Joi.string().required(),
 });
 
+const joiEmailSchema = Joi.object({
+  email: Joi.string().pattern(emailRegexp).required(),
+});
+
 const User = model("user", userSchema);
 
 module.exports = {
@@ -140,4 +144,5 @@ module.exports = {
   joiLoginSchema,
   joiEditInfoSchema,
   joiRefreshTokenSchema,
+  joiEmailSchema,
 };

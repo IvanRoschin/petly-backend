@@ -11,6 +11,7 @@ const {
   joiLoginSchema,
   joiEditInfoSchema,
   joiRefreshTokenSchema,
+  joiEmailSchema,
 } = require("../../models/user");
 const { usersCtrls: ctrl } = require("../../controllers");
 
@@ -49,6 +50,12 @@ router.patch(
   auth,
   validation(joiEditInfoSchema),
   ctrlWrapper(ctrl.editInfo)
+);
+
+router.patch(
+  "/restore",
+  validation(joiEmailSchema),
+  ctrlWrapper(ctrl.restorePass)
 );
 
 router.put(

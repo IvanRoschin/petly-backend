@@ -16,4 +16,6 @@ router.post(
 
 router.delete("/:petId", auth, ctrlWrapper(ctrl.removeById));
 
+router.patch("/:petId", auth, ctrlWrapper(ctrl.editInfo));
+
 module.exports = router;

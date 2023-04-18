@@ -7,6 +7,7 @@ const editInfo = require("./editInfo");
 const refreshToken = require("./refreshToken");
 const googleAuth = require("./googleAuth");
 const deleteUser = require("./delete");
+const restorePass = require("./restorePass");
 
 module.exports = {
   signUp,
@@ -18,4 +19,5 @@ module.exports = {
   refreshToken,
   googleAuth,
   deleteUser,
+  restorePass,
 };
