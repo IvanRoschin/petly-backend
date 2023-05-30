@@ -5,23 +5,18 @@ const editInfo = async (req, res) => {
   const { petId } = req.params;
   const { _id } = req.user;
 
-  const body = req.body;
-
-  const foundPet = await Pet.findByIdAndUpdate(
-    {
-      owner: _id,
-      _id: petId,
-    },
-    body,
+  const updatedPet = await Pet.findOneAndUpdate(
+    { _id: petId, owner: _id },
+    req.body,
     {
       new: true,
     }
   );
-  if (!foundPet) {
+  if (!updatedPet) {
     throw new NotFound(`Pet with id=${petId} not found`);
   }
 
-  res.json(body);
+  res.json(updatedPet);
 };
 
 module.exports = editInfo;

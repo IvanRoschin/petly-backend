@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const app = require("./app");
 const checkFolders = require("./helpers");
 
-const { DB_HOST, PORT = 3030 } = process.env;
+const { DB_HOST, PORT = 8080 } = process.env;
 
 mongoose
   .connect(DB_HOST)
