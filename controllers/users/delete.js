@@ -5,7 +5,6 @@ const { NotFound } = require("http-errors");
 
 const deleteUser = async (req, res) => {
   const { _id } = req.user;
-  console.log("_id", _id);
 
   const deletedNotice = await Notice.deleteMany({
     owner: _id,

@@ -4,7 +4,8 @@ const { NotFound } = require("http-errors");
 const editInfo = async (req, res) => {
   const { petId } = req.params;
   const { _id } = req.user;
-
+  console.log("petId", petId);
+  console.log("req.body", req.body);
   const updatedPet = await Pet.findOneAndUpdate(
     { _id: petId, owner: _id },
     req.body,
@@ -15,7 +16,6 @@ const editInfo = async (req, res) => {
   if (!updatedPet) {
     throw new NotFound(`Pet with id=${petId} not found`);
   }
-
   res.json(updatedPet);
 };
 
