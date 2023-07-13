@@ -29,6 +29,7 @@
     "passport": "^0.6.0",
     "passport-google-oauth2": "^0.2.0",
     "path": "^0.12.7",
+    "streamifier": "^0.1.1",
     "swagger-ui-express": "^4.6.2",
     "uuid": "^9.0.0"
   },

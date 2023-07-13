@@ -5,7 +5,6 @@ const tmpDir = path.resolve("tmp");
 
 const multerConfig = multer.diskStorage({
   destination: (req, file, cb) => {
-    console.log("file", file);
     cb(null, tmpDir);
   },
   filename: (req, file, cb) => {
@@ -15,9 +14,9 @@ const multerConfig = multer.diskStorage({
 
 const upload = multer({
   storage: multerConfig,
-  // limits: {
-  //   fileSize: 2048 (3145728),
-  // },
+  limits: {
+    fileSize: 2048(3145728),
+  },
 });
 
 module.exports = upload;

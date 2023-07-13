@@ -4,7 +4,6 @@ const { Conflict } = require("http-errors");
 const editInfo = async (req, res) => {
   const user = req.user;
   const body = req.body;
-  console.log("body", body);
 
   const key = Object.keys(body);
 
